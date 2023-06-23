@@ -1,9 +1,7 @@
 <?php
 
 use App\Http\Controllers\Counter;
-use App\Http\Livewire\Counter as LivewireCounter;
 use Illuminate\Support\Facades\Route;
-use SebastianBergmann\LinesOfCode\Counter as LinesOfCodeCounter;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +14,7 @@ use SebastianBergmann\LinesOfCode\Counter as LinesOfCodeCounter;
 |
 */
 
-Route::any('/', function (LivewireCounter $count) {
-    return view('welcome', ['count' => $count->count]);
+Route::any('/{a}/{b}', function ($abc, Counter $count, $xyz) {
+
+    return view('welcome', ['a' => $count->count . ' ' . $abc . ' ' . $xyz]);
 });

@@ -5,6 +5,7 @@
 
 <x-layout>
     <x-slot name="content">
-        test commit 2
+        {{ $a }}
+       
     </x-slot>
 </x-layout>

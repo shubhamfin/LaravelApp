@@ -6,5 +6,5 @@ use Illuminate\Http\Request;
 
 class Counter extends Controller
 {
-    //
+   public  $count  = 123;
 }
