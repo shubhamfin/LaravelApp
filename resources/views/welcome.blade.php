@@ -5,6 +5,6 @@
 
 <x-layout>
     <x-slot name="content">
-        test commit
+        test commit 2
     </x-slot>
 </x-layout>
