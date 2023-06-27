@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $a = Posts::find(1);
-    $a->title = 'b';
-    $a->save();
+    // $a = Posts::find(1);
+    // $a->title = 'b';
+    // $a->save();
     
-    // return view('welcome', ['a' => $count->count . ' ' . $abc . ' ' . $xyz]);
+    return view('welcome');
 });
