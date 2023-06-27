@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Counter;
+use App\Models\posts;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::any('/{a}/{b}', function ($abc, Counter $count, $xyz) {
-
-    return view('welcome', ['a' => $count->count . ' ' . $abc . ' ' . $xyz]);
+Route::get('/', function () {
+    $a = Posts::find(1);
+    $a->title = 'b';
+    $a->save();
+    
+    // return view('welcome', ['a' => $count->count . ' ' . $abc . ' ' . $xyz]);
 });
