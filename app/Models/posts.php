@@ -12,7 +12,7 @@ class posts extends Model
 
     public function category()
     {
-        
+
         return $this->belongsTo(Category::class);
     }
 }
