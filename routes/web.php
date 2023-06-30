@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\Counter;
 use App\Models\posts;
+use App\Http\Controllers\Counter;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,9 @@ Route::get('/', function () {
     // $a = Posts::find(1);
     // $a->title = 'b';
     // $a->save();
-    
+
     return view('welcome');
 });
+
+Route::get('register', [RegisterController::class, 'create']);
+Route::post('register', [RegisterController::class, 'store']);
